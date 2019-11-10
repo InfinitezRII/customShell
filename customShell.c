@@ -163,7 +163,7 @@ int myCmd(char** parsed)
     myCmds[2] = "help"; 
     myCmds[3] = "hello"; 
     myCmds[4] = "cent";
-	myCmds[5] = "dout";  
+    myCmds[5] = "dout";  
   
     for (i = 0; i < NoOfMyCmds; i++) { 
         if (strcmp(parsed[0], myCmds[i]) == 0) { 
@@ -174,7 +174,7 @@ int myCmd(char** parsed)
   
     switch (switchMyArg) { 
     case 1: 
-        printf("\nGoodbye\n"); 
+        printf("\nLeave Custom Shell\n"); 
         exit(0); 
     case 2: 
         chdir(parsed[1]); 
@@ -195,7 +195,7 @@ int myCmd(char** parsed)
         return 1; 
     case 6: 
     	chdir("..");
-    	rmdir(parsed[1],0777); 
+    	rmdir(parsed[1]); 
         return 1; 
     default: 
         break; 
